@@ -18,6 +18,9 @@ code {
 .text-brand{
   color:#5057EA
 }
+.bg-brand{
+  background-color:#5057EA
+}
 .flex-2{
   flex: 2;
 }
