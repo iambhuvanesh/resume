@@ -13,11 +13,10 @@ export const clock = <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
   <path d="M14.9999 0C6.72895 0 0 6.72895 0 14.9999C0 23.2709 6.72882 30 14.9997 30C23.2708 30 29.9996 23.2709 29.9996 14.9999C29.9997 6.72895 23.2709 0 14.9999 0ZM14.9999 27.9466C7.86119 27.9466 2.05352 22.1387 2.05352 14.9999C2.05339 7.86119 7.86119 2.05339 14.9999 2.05339C22.1385 2.05339 27.9463 7.86119 27.9463 14.9999C27.9463 22.1388 22.1385 27.9466 14.9999 27.9466Z" fill="#5057EA" />
   <path d="M22.7393 14.7994H15.6139V7.01546C15.6139 6.44845 15.1544 5.98877 14.5872 5.98877C14.0202 5.98877 13.5605 6.44845 13.5605 7.01546V15.8261C13.5605 16.3932 14.0202 16.8528 14.5872 16.8528H22.7393C23.3065 16.8528 23.766 16.3932 23.766 15.8261C23.766 15.2591 23.3063 14.7994 22.7393 14.7994Z" fill="#5057EA" />
 </svg>
-const Body = tw(styled.div`
-
+const Body = styled(tw.div`relative`)`
 min-height:100vh;
 font-family:Montserrat;
-`)`relative`;
+`;
 const HeroContainer = tw.div`h-32 bg-brand flex justify-center relative shadow-lg rounded-t-none`;
 const MainTitle = tw.div`text-5xl text-center text-white font-bold w-full mt-4`;
 const Profile = tw(styled.div`bottom:-20%;img{
@@ -96,7 +95,6 @@ const Circle = styled(EventGapper)`position:relative;left:-1rem;top:0.5rem;svg{
 
 const Event = tw(styled.div`
 grid-template-columns: 270px 10px 10px auto;
-
 `)`grid`;
 const EventInfo = tw(styled.div`
 p{
