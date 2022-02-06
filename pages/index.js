@@ -27,7 +27,7 @@ const logo={
     hide:{rotate:360},
     
 }
-const AnimatedLink = motion(ExternalLink)
+
 export default function Index(){
     return (
         <motion.div variants={container} animate="show" initial="hide">
