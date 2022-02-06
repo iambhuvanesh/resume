@@ -30,11 +30,11 @@ const logo={
 
 export default function Index(){
     return (
-        <motion.div variants={container} animate="show" initial="hide">
+        <div>
             <div className="shadow-lg">
             <nav className="flex justify-between container mx-auto p-4 font-bold items-center">
             <div className="flex">
-                <motion.div className="text-6xl text-brand" variants={logo}>B</motion.div>
+                <motion.div className="text-5xl text-brand" animate="show" initial="hide" variants={logo}>B</motion.div>
             </div>
             <div className="flex">
             <Link href="/resume"><a className="text-brand">Resume</a></Link>
@@ -43,7 +43,7 @@ export default function Index(){
              </nav>
             </div>
         
-        <div className="flex items-center h-full justify-center p-4 container flex-col mx-auto" style={{height:'calc(100vh - 70px)'}}>
+        <motion.div variants={container} animate="show" initial="hide" className="flex items-center h-full justify-center p-4 container flex-col mx-auto" style={{height:'calc(100vh - 70px)'}}>
         <div className="container mx-auto text-center text-5xl p-4 text-brand">
             <header>Bhuvaneswaran Mohan</header>
         </div>
@@ -61,8 +61,8 @@ export default function Index(){
                 ))
             }
         </div>
-        </div>
         </motion.div>
+        </div>
        
        
     )
