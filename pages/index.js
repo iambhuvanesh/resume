@@ -37,13 +37,13 @@ export default function Index(){
                 <motion.div className="text-5xl text-brand" animate="show" initial="hide" variants={logo}>B</motion.div>
             </div>
             <div className="flex">
-            <Link href="/resume"><a className="text-brand">Resume</a></Link>
+            <Link href="/resume"><a className="">Resume</a></Link>
             </div>
            
              </nav>
             </div>
         
-        <motion.div variants={container} animate="show" initial="hide" className="flex items-center h-full justify-center p-4 container flex-col mx-auto" style={{height:'calc(100vh - 70px)'}}>
+        <motion.div variants={container} animate="show" initial="hide" className="flex items-center h-full justify-center p-4 container flex-col mx-auto" style={{height:'calc(100vh - 100px)'}}>
         <div className="container mx-auto text-center text-5xl p-4 text-brand">
             <header>Bhuvaneswaran Mohan</header>
         </div>
