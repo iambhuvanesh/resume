@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import { FaFacebook,FaTwitter,FaInstagram,FaLinkedin,FaGithub } from "react-icons/fa";
+import Header from '../components/header';
 const ExternalLink = (props) => <a {...props} target="_blank">{props.children}</a>
 const social = [{link:'https://www.facebook.com/bhuvanesh.audi',icon:<FaFacebook/>},
 {link:'https://twitter.com/bhuvanesh_audi',icon:<FaTwitter/>},{link:'https://www.instagram.com/that_pondy_dude',icon:<FaInstagram/>},
@@ -19,29 +20,12 @@ const icons = {
     show:{y:10},
     hide:{y:100}
 }
-const logo={
-    show:{rotate:0,transition:{
-        delay:1,
-        duration:1
-    }},
-    hide:{rotate:360},
-    
-}
+
 
 export default function Index(){
     return (
         <div>
-            <div className="shadow-lg">
-            <nav className="flex justify-between container mx-auto p-4 font-bold items-center">
-            <div className="flex">
-                <motion.div className="text-5xl text-brand" animate="show" initial="hide" variants={logo}>B</motion.div>
-            </div>
-            <div className="flex">
-            <Link href="/resume"><a className="">Resume</a></Link>
-            </div>
-           
-             </nav>
-            </div>
+            <Header/>
         
         <motion.div variants={container} animate="show" initial="hide" className="flex items-center h-full justify-center p-4 container flex-col mx-auto" style={{height:'calc(100vh - 100px)'}}>
         <div className="container mx-auto text-center text-5xl p-4 text-brand">
