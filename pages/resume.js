@@ -21,7 +21,7 @@ const Body = styled(tw.div`relative`)`
 min-height:100vh;
 font-family:Montserrat;
 `;
-const HeroContainer = tw.div`h-32 bg-brand flex justify-center relative shadow-lg rounded-t-none`;
+const HeroContainer = tw.div`md:h-32 bg-brand flex md:flex-row flex-col justify-center relative shadow-lg rounded-t-none`;
 const MainTitle = tw.div`text-5xl text-center text-white font-bold w-full mt-4`;
 const Profile = tw(styled.div`bottom:-20%;img{
   border-radius:50%;
@@ -45,8 +45,8 @@ const LeftItem = tw(styled(Section)`ul{
   top:10px;
  height:10px;width:10px;background-color:${primaryColor};border-radius:50%;
 }
-  }}`)`flex p-4 text-lg flex-2 mr-5 bg-white`
-const RightItem = tw(Section)`flex flex-1 ml-5 bg-white`;
+  }}`)`flex p-4 text-lg flex-2 md:mr-5 bg-white`
+const RightItem = tw(Section)`flex flex-1 md:ml-5 bg-white`;
 const Skills = tw.div`grid grid-cols-2 gap-x-2 justify-between w-full p-4`;
 const Skill = tw.div`p-2 border-brand border-1 p-2 rounded-2xl border my-2 text-center flex items-center justify-center text-sm`
 const skills = ['HTML', 'CSS', 'Javascript', 'React', 'Ember', 'AngularJS', 'Redux', 'Webpack', 'NextJS', 'Typescript', 'NodeJS', 'SEO']
@@ -99,7 +99,10 @@ const Circle = styled(EventGapper)`position:relative;left:-1rem;top:0.5rem;svg{
 
 const Event = tw(styled.div`
 grid-template-columns: 270px 10px 10px auto;
-`)`grid`;
+@media (max-width:768px){
+  grid-template-columns: 170px 10px 10px auto;
+}
+`)`grid  md:text-base`;
 const EventInfo = tw(styled.div`
 p{
   position:relative;
@@ -117,19 +120,19 @@ p{
 const EventAction = tw(styled.div`border-color:${primaryColor}`)`p-2 border border-1 rounded-2xl inline-block text-brand`;
 const EventTitle = tw.div`p-2 text-lg font-bold`;
 const EventDetail = tw(EventGapper)``;
-const EventDate = tw(EventGapper)`mr-2 whitespace-nowrap text-center`;
+const EventDate = tw(EventGapper)`mr-2 md:whitespace-nowrap text-center`;
 const EventLine = tw(styled.div`background-color:#5057EA;width:2px;margin:0 3px`)``
 const ExternalLink = tw.div``
-const Info = tw.div`flex justify-between w-full p-4 absolute bottom-0`
+const Info = tw.div`flex justify-between w-full p-4 md:absolute bottom-0`
 const Mobile = tw.div`text-white `
 const Email = tw.div`text-white `;
 const Education = tw(Section)`p-4 mb-2 pt-2 mt-4`;
 const Line = tw.div`grid grid-cols-12 justify-between my-1 auto-cols-max gap-2 text-base`;
 const Course = tw(styled.div``)`col-span-4`
 const Place = tw.div`col-span-4 text-left`
-const Mark = tw.div`font-semibold col-span-2 whitespace-nowrap`
+const Mark = tw.div`font-semibold col-span-2 md:whitespace-nowrap`
 const Title = tw.div`text-lg font-bold px-2`
-const Year = tw(styled.div``)`font-semibold col-span-1 	`
+const Year = tw(styled.div``)`font-semibold md:col-span-1 	col-span-2`
 function App() {
   return (
     <Body className="">
@@ -146,8 +149,8 @@ function App() {
         <Description>
           Versatile Front-end developer with 9 years of experience in developing web applications. Seeking a canvas to showcase my capabilities in an innovative and creative way, culminating in mutual growth.
 </Description>
-        <Flex>
-          <LeftItem>
+        <Flex className="md:flex-row flex-col">
+          <LeftItem className="mr-0">
             <ul className="">
               <li><p>Extensive knowledge in front-end web technologies</p></li>
               <li><p>Fail fast for functionality and optimize for performance throughout</p></li>
@@ -176,7 +179,7 @@ function App() {
               timeline.events.map(event =>
                 <Event key={event.date}>
                   <EventDate>
-                    <div className="rounded-xl bg-white p-2 mr-2">{event.date}</div>
+                    <div className="rounded-xl bg-white p-2 mr-2 ">{event.date}</div>
                   </EventDate>
                   <EventLine />
                   <Circle>
